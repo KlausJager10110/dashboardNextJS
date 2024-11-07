@@ -6,6 +6,9 @@ import Header from '@/components/common/header'
 import { UserCheck, UserPlus, UsersIcon, UserX } from "lucide-react";
 import StatCard from '@/components/common/statCard';
 import UsersTable from '@/components/user/usersTable';
+import UserGrowthChart from '@/components/user/userGrowthChart';
+import UserActivityHeatmap from '@/components/user/userActivityHeatmap';
+import UserDemographicsChart from '@/components/user/userDemographicsChart';
 
 
 const userStats = {
@@ -18,7 +21,7 @@ const userStats = {
 const Users = () => {
     return (
         <div className="flex-1 overflow-auto relative z-10">
-            <Header title="Overview" />
+            <Header title="Users" />
 
             <main className='max-w-7xl mx-auto py-6 px-4 lg:px-8'>
                 {/* STATS */}
@@ -44,13 +47,14 @@ const Users = () => {
                     <StatCard name='Churn Rate' icon={UserX} value={userStats.churnRate} color='#EF4444' />
                 </motion.div>
 
+                {/* User Table */}
                 <UsersTable />
 
-                {/* USER CHARTS */}
+                {/* User Charts */}
                 <div className='grid grid-cols-1 lg:grid-cols-2 gap-6 mt-8'>
-                    {/* <UserGrowthChart />
+                    <UserGrowthChart />
                     <UserActivityHeatmap />
-                    <UserDemographicsChart /> */}
+                    <UserDemographicsChart />
                 </div>
             </main>
         </div>
