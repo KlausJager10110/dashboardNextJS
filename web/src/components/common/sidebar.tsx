@@ -5,7 +5,6 @@ import React, { useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion';
 import Link from 'next/link';
 
-type Props = {}
 
 
 const SIDEBAR_ITEMS = [
@@ -24,7 +23,7 @@ const SIDEBAR_ITEMS = [
 ]
 
 
-function Sidebar({ }: Props) {
+function Sidebar() {
     const [isSidebarOpen, setIsSidebarOpen] = useState(true);
     return (
         <motion.div
